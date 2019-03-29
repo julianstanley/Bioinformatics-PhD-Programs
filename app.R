@@ -5,7 +5,9 @@ library(readxl)
 library(scales)
 library(DT)
 
-appData <- read_excel("./app data.xlsx")
+appData <- suppressMessages(
+    gs_key("1mMbBlS-UK1OML3ZyahM7klpiPUDRNx3pFhDjsl9l32Y") %>% gs_read())
+
 appData$Deadline <- format(appData$Deadline, "%b %d") #e.g. Dec 15
 
 ui <- fluidPage(
