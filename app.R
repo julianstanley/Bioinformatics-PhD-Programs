@@ -1,7 +1,7 @@
 library(shiny)
 library(leaflet)
 library(maps)
-library(readxl)
+library(googlesheets)
 library(scales)
 library(DT)
 

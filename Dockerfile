@@ -2,7 +2,7 @@
 FROM rocker/shiny
 
 #install R packages
-RUN R -e "install.packages(c('shiny', 'leaflet', 'maps', 'readxl', 'scales', 'DT'), repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages(c('shiny', 'leaflet', 'maps', 'googlesheets', 'scales', 'DT'), repos='http://cran.rstudio.com/')"
 
 #copy configuration file into the Docker image
 COPY /shiny-server.conf  /etc/shiny-server/shiny-server.conf
